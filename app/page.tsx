@@ -1,9 +1,9 @@
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import AnimatedText from "@/components/animated-text"
-import { HeroParallax } from "@/components/hero-parallax"
-import { SkillsShowcase } from "@/components/skills-showcase"
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import AnimatedText from "@/components/animated-text";
+import { HeroParallax } from "@/components/hero-parallax";
+import { SkillsShowcase } from "@/components/skills-showcase";
 
 export default function Home() {
   return (
@@ -19,8 +19,9 @@ export default function Home() {
                 <AnimatedText text="Full Stack Developer" delay={0.3} />
               </h2>
               <p className="mt-4 text-muted-foreground md:text-xl max-w-[600px]">
-                I build exceptional digital experiences that make people's lives easier. Focused on creating intuitive,
-                accessible, and performant web applications.
+                I build exceptional digital experiences that make people's lives
+                easier. Focused on creating intuitive, accessible, and
+                performant web applications.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Button asChild size="lg" className="group">
@@ -45,7 +46,9 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Skills</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                My Skills
+              </h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Here are some of the technologies I work with
               </p>
@@ -66,35 +69,81 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Featured Projects</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                Featured Projects
+              </h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Check out some of my recent work
               </p>
             </div>
           </div>
           <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:gap-8 xl:gap-10 mt-8">
-            {[1, 2, 3].map((i) => (
-              <Link
-                key={i}
-                href={`/projects/project-${i}`}
-                className="group relative overflow-hidden rounded-lg border bg-background p-2 transition-all hover:shadow-md"
-              >
-                <div className="aspect-video overflow-hidden rounded-md bg-muted">
-                  <img
-                    src={`/placeholder.svg?height=400&width=600&text=Project+${i}`}
-                    alt={`Project ${i}`}
-                    width={600}
-                    height={400}
-                    className="object-cover transition-all group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold tracking-tight">Project {i}</h3>
-                  <p className="text-sm text-muted-foreground">A sample project description goes here.</p>
-                </div>
-              </Link>
-            ))}
+            {/* Project 1 */}
+            <Link
+              href="https://meet-x-nine.vercel.app/"
+              className="group relative overflow-hidden rounded-lg border bg-background p-2 transition-all hover:shadow-md"
+            >
+              <div className="aspect-video overflow-hidden rounded-md bg-muted">
+                <img
+                  src="/3.png?height=400&width=600&text=Project+1"
+                  alt="Project 1"
+                  width={600}
+                  height={400}
+                  className="object-cover transition-all group-hover:scale-105"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold tracking-tight">MeetX</h3>
+                <p className="text-sm text-muted-foreground">
+                  A remote interview platform that connects interviewers and candidates
+                </p>
+              </div>
+            </Link>
+
+            {/* Project 2 */}
+            <Link
+              href="https://friendmanager-zokq.onrender.com/"
+              className="group relative overflow-hidden rounded-lg border bg-background p-2 transition-all hover:shadow-md"
+            >
+              <div className="aspect-video overflow-hidden rounded-md bg-muted">
+                <img
+                  src="/4.png?height=400&width=600&text=Project+2"
+                  alt="Project 2"
+                  width={600}
+                  height={400}
+                  className="object-cover transition-all group-hover:scale-105"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold tracking-tight">Friend Manager</h3>
+                <p className="text-sm text-muted-foreground">
+                  A friend storing app that allows you to add, edit, and delete friends
+                </p>
+              </div>
+            </Link>
+
+            <Link
+              href="https://fitlifehub12.netlify.app/"
+              className="group relative overflow-hidden rounded-lg border bg-background p-2 transition-all hover:shadow-md"
+            >
+              <div className="aspect-video overflow-hidden rounded-md bg-muted">
+                <img
+                  src="/7.png?height=400&width=600&text=Project+3"
+                  alt="Project 3"
+                  width={600}
+                  height={400}
+                  className="object-cover transition-all group-hover:scale-105"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold tracking-tight">Fitlife Hub</h3>
+                <p className="text-sm text-muted-foreground">
+                  A fitness app that helps you track your workouts and nutrition
+                </p>
+              </div>
+            </Link>
           </div>
+
           <div className="flex justify-center mt-10">
             <Button asChild>
               <Link href="/projects">View All Projects</Link>
@@ -103,5 +152,5 @@ export default function Home() {
         </div>
       </section>
     </main>
-  )
+  );
 }

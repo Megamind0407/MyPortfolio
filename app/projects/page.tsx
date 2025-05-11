@@ -43,8 +43,8 @@ export default function ProjectsPage() {
       title: "Expense Tracker App",
       description: "A simple and user-friendly application that helps users manage their personal finances by tracking income and expenses.",
       technologies: ["React.js", "MongoDB", "Node.js", "Express", "Tailwind CSS"],
-      image: "/placeholder.svg?height=400&width=600&text=Real+Estate+Platform",
-      link: "/projects/real-estate-platform",
+      image: "/8.png?height=400&width=600&text=Real+Estate+Platform",
+      link: "https://expense-trackeret.vercel.app",
     },
     {
       id: 6,
