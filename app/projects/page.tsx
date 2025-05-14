@@ -11,8 +11,18 @@ export default function ProjectsPage() {
       image: "/3.png?height=400&width=600&text=Interview+Platform",
       link: "https://meet-x-nine.vercel.app/",
     },
+    
     {
       id: 2,
+      title: "Churn Predictor System",
+      description:
+        "A web-based sentiment analysis tool that leverages a pre-trained transformer model (DistilBERT) to classify and visualize social media text sentiments in real-time.",
+      technologies: ["Python", "Scikit-learn", "HuggingFace", "Streamlit"],
+      image: "/6.png?height=400&width=600&text=Social+Media+Dashboard",
+      link: "https://customerchurnpredictorsystem.streamlit.app",
+    },
+    {
+      id: 3,
       title: "Friend Storing App",
       description:
         "A collaborative task management application with real-time updates and team collaboration features.",
@@ -21,7 +31,7 @@ export default function ProjectsPage() {
       link: "https://friendmanager-zokq.onrender.com",
     },
     {
-      id: 3,
+      id: 4,
       title: "Real-time Chat Application",
       description:
         "A web application for real-time chatting, sharing files, and media content with secure user auth.",
@@ -29,20 +39,12 @@ export default function ProjectsPage() {
       image: "/5.png?height=400&width=600&text=Health+Fitness+Tracker",
       link: "https://chat-app-lovat-two-70.vercel.app/",
     },
-    {
-      id: 4,
-      title: "Social Media Platform",
-      description:
-        "A comprehensive platform for creating and managing social media across multiple platforms.",
-      technologies: ["React.js", "MongoDB", "Node.js", "Express", "Tailwind CSS"],
-      image: "/6.png?height=400&width=600&text=Social+Media+Dashboard",
-      link: "/projects/social-media-dashboard",
-    },
+    
     {
       id: 5,
       title: "Expense Tracker App",
       description: "A simple and user-friendly application that helps users manage their personal finances by tracking income and expenses.",
-      technologies: ["React.js", "MongoDB", "Node.js", "Express", "Tailwind CSS"],
+      technologies: ["React.js", "MongoDB", "Node.js", "Express"],
       image: "/8.png?height=400&width=600&text=Real+Estate+Platform",
       link: "https://expense-trackeret.vercel.app",
     },
