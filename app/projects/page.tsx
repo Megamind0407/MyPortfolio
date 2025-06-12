@@ -5,6 +5,14 @@ export default function ProjectsPage() {
   const projects = [
     {
       id: 1,
+      title: "AI-Based Fault Detection System",
+      description: "An AI-powered fault detection system that uses machine learning algorithms to identify and predict faults in industrial equipment",
+      technologies: ["Python", "CNN", "Tensorflow/Keras","Streamlit"],
+      image: "/1.png?height=400&width=600&text=Interview+Platform",
+      link: "https://solarfaultdetection-pamcnmtbxpgcp9wreqbznn.streamlit.app/",
+    },
+    {
+      id: 2,
       title: "MeetX - Remote Interview Platform",
       description: "A full-featured remote interview platform, live video/audio sessions and user authentication..",
       technologies: ["Next.js", "TypeScript", "Stream", "Convex", "Clerk"],
@@ -13,7 +21,7 @@ export default function ProjectsPage() {
     },
     
     {
-      id: 2,
+      id: 3,
       title: "Churn Predictor System",
       description:
         "A web-based sentiment analysis tool that leverages a pre-trained transformer model (DistilBERT) to classify and visualize social media text sentiments in real-time.",
@@ -22,7 +30,7 @@ export default function ProjectsPage() {
       link: "https://customerchurnpredictorsystem.streamlit.app",
     },
     {
-      id: 3,
+      id: 4,
       title: "Friend Storing App",
       description:
         "A collaborative task management application with real-time updates and team collaboration features.",
@@ -31,7 +39,7 @@ export default function ProjectsPage() {
       link: "https://friendmanager-zokq.onrender.com",
     },
     {
-      id: 4,
+      id: 5,
       title: "Real-time Chat Application",
       description:
         "A web application for real-time chatting, sharing files, and media content with secure user auth.",
@@ -40,14 +48,6 @@ export default function ProjectsPage() {
       link: "https://chat-app-lovat-two-70.vercel.app/",
     },
     
-    {
-      id: 5,
-      title: "Expense Tracker App",
-      description: "A simple and user-friendly application that helps users manage their personal finances by tracking income and expenses.",
-      technologies: ["React.js", "MongoDB", "Node.js", "Express"],
-      image: "/8.png?height=400&width=600&text=Real+Estate+Platform",
-      link: "https://expense-trackeret.vercel.app",
-    },
     {
       id: 6,
       title: "Fitness Website",
