@@ -8,7 +8,7 @@ export default function ProjectsPage() {
       title: "AI-Based Fault Detection System",
       description: "An AI-powered fault detection system that uses machine learning algorithms to identify and predict faults in industrial equipment",
       technologies: ["Python", "CNN", "Tensorflow/Keras","Streamlit"],
-      image: "/1.png?height=400&width=600&text=Interview+Platform",
+      image: "/2.png?height=400&width=600&text=Interview+Platform",
       link: "https://solarfaultdetection-pamcnmtbxpgcp9wreqbznn.streamlit.app/",
     },
     {
