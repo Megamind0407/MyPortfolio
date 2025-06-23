@@ -16,7 +16,7 @@ export function Footer() {
         </div>
         <div className="flex gap-4">
           <Link
-            href="https://github.com"
+            href="https://github.com/Megamind0407"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full p-2 text-muted-foreground hover:bg-muted hover:text-foreground"
@@ -25,7 +25,7 @@ export function Footer() {
             <span className="sr-only">GitHub</span>
           </Link>
           <Link
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/aryan-gaikwad"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full p-2 text-muted-foreground hover:bg-muted hover:text-foreground"
@@ -34,7 +34,7 @@ export function Footer() {
             <span className="sr-only">LinkedIn</span>
           </Link>
           <Link
-            href="https://twitter.com"
+            href="https://x.com/aryan29093"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full p-2 text-muted-foreground hover:bg-muted hover:text-foreground"
@@ -43,7 +43,7 @@ export function Footer() {
             <span className="sr-only">Twitter</span>
           </Link>
           <Link
-            href="mailto:john.doe@example.com"
+            href="mailto:aryangaikwad505@gmail.com"
             className="rounded-full p-2 text-muted-foreground hover:bg-muted hover:text-foreground"
           >
             <Mail className="h-5 w-5" />
