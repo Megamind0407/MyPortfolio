@@ -16,7 +16,7 @@ export default function Home() {
                 <AnimatedText text="Hi, I'm Aryan Gaikwad" />
               </h1>
               <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl text-primary mt-2">
-                <AnimatedText text="Full Stack Developer" delay={0.3} />
+                <AnimatedText delay={0.3} />
               </h2>
               <p className="mt-4 text-muted-foreground md:text-xl max-w-[600px]">
                 I build exceptional digital experiences that make people's lives
