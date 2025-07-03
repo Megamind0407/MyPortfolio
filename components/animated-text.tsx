@@ -1,27 +1,59 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { motion, useInView, useAnimation } from "framer-motion"
 
 interface AnimatedTextProps {
-  text: string
+  text?: string
   delay?: number
   duration?: number
   className?: string
 }
 
-export default function AnimatedText({ text, delay = 0, duration = 0.05, className = "" }: AnimatedTextProps) {
+const phrases = [
+  "Full Stack Developer",
+  "Cloud Enthusiast",
+  "Open Source Contributor",
+  "Tech Blogger",
+  "Software Engineer"
+]
+
+export default function AnimatedText({
+  text,
+  delay = 0,
+  duration = 0.05,
+  className = ""
+}: AnimatedTextProps) {
   const controls = useAnimation()
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
+  const isInView = useInView(ref)
+
+  const [index, setIndex] = useState(0)
+  const displayText = text ?? phrases[index]
 
   useEffect(() => {
+    let timeout: NodeJS.Timeout
     if (isInView) {
-      controls.start("visible")
+      controls.start("hidden").then(() => {
+        timeout = setTimeout(() => {
+          controls.start("visible")
+        }, 300) 
+      })
     }
-  }, [controls, isInView])
 
-  const words = text.split(" ")
+    return () => clearTimeout(timeout)
+  }, [displayText, isInView, controls])
+
+  useEffect(() => {
+    if (!text) {
+      const interval = setInterval(() => {
+        setIndex((prev) => (prev + 1) % phrases.length)
+      }, 5000) 
+      return () => clearInterval(interval)
+    }
+  }, [text])
+
+  const words = displayText.split(" ")
 
   const container = {
     hidden: { opacity: 0 },
