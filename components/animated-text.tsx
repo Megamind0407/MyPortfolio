@@ -1,102 +1,103 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { motion, useInView, useAnimation } from "framer-motion"
+import { motion, useInView, AnimatePresence } from "framer-motion"
 
 interface AnimatedTextProps {
   text?: string
   delay?: number
-  duration?: number
   className?: string
+  cycleInterval?: number
 }
 
 const phrases = [
+  "Software Engineer",
   "Full Stack Developer",
-  "Cloud Enthusiast",
+  "Cloud Enthusiast", 
   "Open Source Contributor",
-  "Tech Blogger",
-  "Software Engineer"
+  "Analytical Thinker",
 ]
 
 export default function AnimatedText({
   text,
   delay = 0,
-  duration = 0.05,
-  className = ""
+  className = "",
+  cycleInterval = 2000
 }: AnimatedTextProps) {
-  const controls = useAnimation()
   const ref = useRef(null)
-  const isInView = useInView(ref)
-
+  const isInView = useInView(ref, { once: false, margin: "100px" })
   const [index, setIndex] = useState(0)
+  
   const displayText = text ?? phrases[index]
 
+  // Simple cycling effect
   useEffect(() => {
-    let timeout: NodeJS.Timeout
-    if (isInView) {
-      controls.start("hidden").then(() => {
-        timeout = setTimeout(() => {
-          controls.start("visible")
-        }, 300) 
-      })
-    }
-
-    return () => clearTimeout(timeout)
-  }, [displayText, isInView, controls])
-
-  useEffect(() => {
-    if (!text) {
+    if (!text && isInView) {
       const interval = setInterval(() => {
         setIndex((prev) => (prev + 1) % phrases.length)
-      }, 5000) 
+      }, cycleInterval)
+      
       return () => clearInterval(interval)
     }
-  }, [text])
+  }, [text, isInView, cycleInterval])
 
   const words = displayText.split(" ")
 
-  const container = {
+  // Simple, clean animations
+  const containerVariants = {
     hidden: { opacity: 0 },
-    visible: (i = 1) => ({
+    visible: {
       opacity: 1,
-      transition: { staggerChildren: duration, delayChildren: delay * i },
-    }),
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: delay,
+      },
+    }
   }
 
-  const child = {
+  const wordVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20
+    },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring",
-        damping: 12,
-        stiffness: 100,
+        duration: 0.6,
+        ease: "easeOut"
       },
-    },
-    hidden: {
-      opacity: 0,
-      y: 20,
-      transition: {
-        type: "spring",
-        damping: 12,
-        stiffness: 100,
-      },
-    },
+    }
+  }
+
+  if (!isInView) {
+    return <div ref={ref} className={`inline-block ${className}`} />
   }
 
   return (
-    <motion.div
-      ref={ref}
-      className={`inline-block ${className}`}
-      variants={container}
-      initial="hidden"
-      animate={controls}
-    >
-      {words.map((word, index) => (
-        <motion.span key={index} className="inline-block mr-1" variants={child}>
-          {word}{" "}
-        </motion.span>
-      ))}
-    </motion.div>
+    <div ref={ref} className={`inline-block ${className}`}>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={text ? "static" : index}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          exit={{ opacity: 0, y: -10 }}
+          className="inline-block"
+          transition={{ duration: 0.3 }}
+        >
+          {words.map((word, wordIndex) => (
+            <motion.span 
+              key={`${word}-${wordIndex}`}
+              className="inline-block mr-1" 
+              variants={wordVariants}
+            >
+              {word}
+              {wordIndex < words.length - 1 ? " " : ""}
+            </motion.span>
+          ))}
+        </motion.div>
+      </AnimatePresence>
+    </div>
   )
 }
