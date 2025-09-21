@@ -1,5 +1,8 @@
 import { PageHeader } from "@/components/page-header"
 import { ProjectCard } from "@/components/project-card"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+
 
 export default function ProjectsPage() {
   const projects = [
@@ -66,6 +69,11 @@ export default function ProjectsPage() {
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
+      </div>
+      <div className="flex justify-center mt-10">
+            <Button>
+              <Link href="https://github.com/Megamind0407?tab=repositories" target="_blank">View More Projects</Link>
+            </Button>
       </div>
     </main>
   )
