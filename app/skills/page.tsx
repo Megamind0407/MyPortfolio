@@ -16,7 +16,7 @@ export default function SkillsPage() {
     { name: "MongoDB", level: 75, category: "Database" },
     { name: "MySQL", level: 90, category: "Database" },
     { name: "PostgreSQL", level: 70, category: "Database" },
-    { name: "GraphQL", level: 65, category: "API" },
+    { name: "Fast API", level: 65, category: "API" },
     { name: "REST API", level: 90, category: "API" },
     { name: "HTML", level: 95, category: "Frontend" },
     { name: "CSS", level: 90, category: "Frontend" },
