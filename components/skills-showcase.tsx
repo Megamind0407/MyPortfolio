@@ -11,7 +11,7 @@ export function SkillsShowcase() {
     { name: "MongoDB", icon: <Database className="h-8 w-8" />, color: "bg-green-100 dark:bg-green-950" },
     { name: "Next.js", icon: <Globe className="h-8 w-8" />, color: "bg-gray-100 dark:bg-gray-800" },
     { name: "React Native", icon: <Smartphone className="h-8 w-8" />, color: "bg-blue-100 dark:bg-blue-950" },
-    { name: "GraphQL", icon: <Layers className="h-8 w-8" />, color: "bg-pink-100 dark:bg-pink-950" },
+    { name: "API's", icon: <Layers className="h-8 w-8" />, color: "bg-pink-100 dark:bg-pink-950" },
     { name: "AWS", icon: <Cloud className="h-8 w-8" />, color: "bg-yellow-100 dark:bg-yellow-950" },
   ]
 
