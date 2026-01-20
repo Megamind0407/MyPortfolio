@@ -5,6 +5,24 @@ export default function CertificationsPage() {
   const certifications = [
     {
       id: 1,
+      title: "Oracle Cloud Database Professional 2025",
+      issuer: "Oracle",
+      date: "October 2025",
+      description: "Certified in managing and optimizing Oracle Cloud database services.",
+      image: "https://img.icons8.com/?size=100&id=39913&format=png&color=000000",
+      credentialId: "AWS-123456",
+    },
+    {
+      id: 2,
+      title: "Oracle Cloud AI Infrastructure 2025 Foundation",
+      issuer: "Oracle",
+      date: "October 2025",
+      description: "Certified in fundamentals of Oracle Cloud AI and GPU-based infrastructure.",
+      image: "https://img.icons8.com/?size=100&id=39913&format=png&color=000000",
+      credentialId: "AWS-123456",
+    },
+    {
+      id: 3,
       title: "AWS Certified Solutions Architect",
       issuer: "Amazon Web Services",
       date: "March 2025",
@@ -13,7 +31,16 @@ export default function CertificationsPage() {
       credentialId: "AWS-123456",
     },
     {
-      id: 2,
+      id: 4,
+      title: "Google Analytics Certification",
+      issuer: "Google Digital Academy",
+      date: "March 2025",
+      description: "Gained hands-on knowledge of tracking, analyzing, and interpreting website traffic data to derive actionable insights and improve performance.",
+      image: "https://img.icons8.com/color/48/google-logo.png",
+      credentialId: "137730523",
+    },
+    {
+      id: 5,
       title: "AWS SAP Fundamentals",
       issuer: "Amazon Web Services",
       date: "April 2025",
@@ -22,7 +49,7 @@ export default function CertificationsPage() {
       credentialId: "AWS-789012",
     },
     {
-      id: 3,
+      id: 6,
       title: "Cisco Certified : Cybersecurity Operations",
       issuer: "Cisco",
       date: "April 2025",
@@ -31,7 +58,7 @@ export default function CertificationsPage() {
       credentialId: "AZ-204-345678",
     },
     {
-      id: 4,
+      id: 7,
       title: "Advanced Javascripts and API",
       issuer: "LinkedIn",
       date: "December 2024",
@@ -40,7 +67,7 @@ export default function CertificationsPage() {
       credentialId: "CKA-901234",
     },
     {
-      id: 5,
+      id: 8,
       title: "Machine Learning Simulation",
       issuer: "MatLab",
       date: "March 2025",
@@ -49,7 +76,7 @@ export default function CertificationsPage() {
       credentialId: "MDB-567890",
     },
     {
-      id: 6,
+      id: 9,
       title: "Python Certification",
       issuer: "Udemy",
       date: "November 2024",
